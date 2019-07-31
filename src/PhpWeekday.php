@@ -142,7 +142,7 @@ class PhpWeekday
     /**
      * Check if the locale is supported.
      *
-     * @param  string  $locales
+     * @param  string  $locale
      * @return bool
      */
     public function isSupported(string $locale) : bool
@@ -153,7 +153,7 @@ class PhpWeekday
     /**
      * Check if the locale is not supported.
      *
-     * @param  string  $locales
+     * @param  string  $locale
      * @return bool
      */
     public function isNotSupported(string $locale) : bool
