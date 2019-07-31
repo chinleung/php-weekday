@@ -34,7 +34,7 @@ class PhpWeekday
      * @param  string  $locale
      * @return self
      */
-    public function __construct($value, string $locale, bool $force = false)
+    public function __construct($value, string $locale)
     {
         $this->setLocale($locale)
              ->set($value);
