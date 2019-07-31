@@ -55,6 +55,16 @@ class PhpWeekday
     }
 
     /**
+     * Retrieve the current locale.
+     *
+     * @return string
+     */
+    public function getLocale() : string
+    {
+        return $this->locale;
+    }
+
+    /**
      * Retrieve the supported locales.
      *
      * @return array
