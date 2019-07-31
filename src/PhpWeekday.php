@@ -28,26 +28,14 @@ class PhpWeekday
     protected $value;
 
     /**
-     * The list of supported locales.
-     *
-     * @var array
-     */
-    protected static $locales = [];
-
-    /**
      * Constructor of the class.
      *
      * @param  string|int  $value
      * @param  string  $locale
-     * @param  bool  $force
      * @return self
      */
     public function __construct($value, string $locale, bool $force = false)
     {
-        if ($force || $this->hasNotLoadedLocales()) {
-            static::refreshLocales();
-        }
-
         $this->setLocale($locale)
              ->set($value);
 
@@ -71,7 +59,10 @@ class PhpWeekday
      */
     public static function getLocales() : array
     {
-        return static::$locales ?: static::refreshLocales();
+        return array_map(
+            'basename',
+            glob(__DIR__.'/../resources/lang/*') ?: []
+        );
     }
 
     /**
@@ -149,26 +140,6 @@ class PhpWeekday
     }
 
     /**
-     * Check if the locales has been loaded.
-     *
-     * @return bool
-     */
-    public function hasLoadedLocales() : bool
-    {
-        return ! $this->hasNotLoadedLocales();
-    }
-
-    /**
-     * Check if the locales has not been loaded yet.
-     *
-     * @return bool
-     */
-    public function hasNotLoadedLocales() : bool
-    {
-        return empty(static::$locales);
-    }
-
-    /**
      * Check if the locale is supported.
      *
      * @param  string  $locales
@@ -176,7 +147,7 @@ class PhpWeekday
      */
     public function isSupported(string $locale) : bool
     {
-        return in_array($locale, static::$locales);
+        return file_exists(__DIR__."/../resources/lang/$locale");
     }
 
     /**
@@ -195,12 +166,11 @@ class PhpWeekday
      *
      * @param  string|int  $value
      * @param  string  $locale
-     * @param  bool  $force
      * @return self
      */
-    public static function parse($value, string $locale, bool $force = false)
+    public static function parse($value, string $locale)
     {
-        return new static($value, $locale, $force);
+        return new static($value, $locale);
     }
 
     /**
@@ -251,21 +221,6 @@ class PhpWeekday
         }
 
         return $value;
-    }
-
-    /**
-     * Refresh the list of supported locales.
-     *
-     * @return array
-     */
-    protected static function refreshLocales() : array
-    {
-        static::$locales = array_map(
-            'basename',
-            glob(__DIR__.'/../resources/lang/*') ?: []
-        );
-
-        return static::$locales;
     }
 
     /**
