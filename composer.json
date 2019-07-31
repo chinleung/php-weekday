@@ -1,0 +1,42 @@
+{
+    "name": "chinleung/php-weekday",
+    "description": "Easily get name of weekday and value from name between different languages.",
+    "keywords": [
+        "chinleung",
+        "php-weekday"
+    ],
+    "homepage": "https://github.com/chinleung/php-weekday",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Chin Leung",
+            "email": "hello@chinleung.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ChinLeung\\PhpWeekday\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ChinLeung\\PhpWeekday\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
