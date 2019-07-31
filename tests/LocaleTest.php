@@ -35,4 +35,12 @@ class LocaleTest extends TestCase
 
         $this->assertEquals('Dimanche', $instance->getName());
     }
+
+    /** @test **/
+    public function it_can_retrieve_the_current_locale() : void
+    {
+        $instance = new PhpWeekday(0, 'en');
+
+        $this->assertEquals('en', $instance->getLocale());
+    }
 }
