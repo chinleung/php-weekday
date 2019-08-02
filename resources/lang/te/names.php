@@ -1,5 +1,6 @@
-<?php 
-return array (
+<?php
+
+return [
   'Sunday' => 'ఆదివారం',
   'Monday' => 'సోమవారం',
   'Tuesday' => 'మంగళవారం',
@@ -7,4 +8,4 @@ return array (
   'Thursday' => 'గురువారం',
   'Friday' => 'శుక్రవారం',
   'Saturday' => 'శనివారం',
-);
+];

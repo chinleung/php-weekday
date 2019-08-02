@@ -1,5 +1,6 @@
-<?php 
-return array (
+<?php
+
+return [
   'Sunday' => 'iCawe',
   'Monday' => 'uMvulo',
   'Tuesday' => 'uLwesibini',
@@ -7,4 +8,4 @@ return array (
   'Thursday' => 'uLwesine',
   'Friday' => 'uLwesihlanu',
   'Saturday' => 'uMgqibelo',
-);
+];

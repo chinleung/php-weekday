@@ -1,5 +1,6 @@
-<?php 
-return array (
+<?php
+
+return [
   'Sunday' => 'Жексенбі',
   'Monday' => 'Дүйсенбі',
   'Tuesday' => 'Сейсенбі',
@@ -7,4 +8,4 @@ return array (
   'Thursday' => 'Бейсенбі',
   'Friday' => 'Жұма',
   'Saturday' => 'Сенбі',
-);
+];

@@ -1,5 +1,6 @@
-<?php 
-return array (
+<?php
+
+return [
   'Sunday' => 'Aso Sa',
   'Monday' => 'Aso Gafua',
   'Tuesday' => 'Aso Lua',
@@ -7,4 +8,4 @@ return array (
   'Thursday' => 'Aso Tofi',
   'Friday' => 'Aso Faralie',
   'Saturday' => 'Aso Tonaʻi',
-);
+];

@@ -1,5 +1,6 @@
-<?php 
-return array (
+<?php
+
+return [
   'Sunday' => 'Dydd Sul',
   'Monday' => 'Dydd Llun',
   'Tuesday' => 'Dydd Mawrth',
@@ -7,4 +8,4 @@ return array (
   'Thursday' => 'Dydd Iau',
   'Friday' => 'Dydd Gwener',
   'Saturday' => 'Dydd Sadwrn',
-);
+];

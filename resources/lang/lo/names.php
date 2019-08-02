@@ -1,5 +1,6 @@
-<?php 
-return array (
+<?php
+
+return [
   'Sunday' => 'ວັນອາທິດ',
   'Monday' => 'ວັນຈັນ',
   'Tuesday' => 'ວັນອັງຄານ',
@@ -7,4 +8,4 @@ return array (
   'Thursday' => 'ວັນພະຫັດ',
   'Friday' => 'ວັນ​ສຸກ',
   'Saturday' => 'ວັນເສົາ',
-);
+];
