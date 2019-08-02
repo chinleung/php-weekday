@@ -1,5 +1,6 @@
-<?php 
-return array (
+<?php
+
+return [
   'Sunday' => 'Dé Domhnaigh',
   'Monday' => 'Dé Luain',
   'Tuesday' => 'Dé Máirt',
@@ -7,4 +8,4 @@ return array (
   'Thursday' => 'Déardaoin',
   'Friday' => 'Dé hAoine',
   'Saturday' => 'Dé Sathairn',
-);
+];

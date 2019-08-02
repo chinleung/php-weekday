@@ -1,5 +1,6 @@
-<?php 
-return array (
+<?php
+
+return [
   'Sunday' => 'vasárnap',
   'Monday' => 'hétfő',
   'Tuesday' => 'kedd',
@@ -7,4 +8,4 @@ return array (
   'Thursday' => 'csütörtök',
   'Friday' => 'péntek',
   'Saturday' => 'szombat',
-);
+];

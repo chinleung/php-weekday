@@ -1,5 +1,6 @@
-<?php 
-return array (
+<?php
+
+return [
   'Sunday' => 'Ħadd',
   'Monday' => 'It-Tnejn',
   'Tuesday' => 'It-Tlieta',
@@ -7,4 +8,4 @@ return array (
   'Thursday' => 'Il-Ħamis',
   'Friday' => 'Nhar il-Ġimgħa',
   'Saturday' => 'Is-Sibt',
-);
+];

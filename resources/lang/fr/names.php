@@ -1,5 +1,6 @@
-<?php 
-return array (
+<?php
+
+return [
   'Sunday' => 'dimanche',
   'Monday' => 'Lundi',
   'Tuesday' => 'Mardi',
@@ -7,4 +8,4 @@ return array (
   'Thursday' => 'Jeudi',
   'Friday' => 'Vendredi',
   'Saturday' => 'samedi',
-);
+];

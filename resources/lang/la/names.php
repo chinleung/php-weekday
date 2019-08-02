@@ -1,5 +1,6 @@
-<?php 
-return array (
+<?php
+
+return [
   'Sunday' => 'Solis',
   'Monday' => 'dies Lunae',
   'Tuesday' => 'Martis',
@@ -7,4 +8,4 @@ return array (
   'Thursday' => 'Iovis',
   'Friday' => 'Veneris',
   'Saturday' => 'Saturni',
-);
+];

@@ -1,5 +1,6 @@
-<?php 
-return array (
+<?php
+
+return [
   'Sunday' => 'Κυριακή',
   'Monday' => 'Δευτέρα',
   'Tuesday' => 'Τρίτη',
@@ -7,4 +8,4 @@ return array (
   'Thursday' => 'Πέμπτη',
   'Friday' => 'Παρασκευή',
   'Saturday' => 'Σάββατο',
-);
+];
