@@ -29,11 +29,14 @@ class LocaleTest extends TestCase
     {
         $instance = new PhpWeekday(0, 'en');
 
-        $this->assertEquals('Sunday', $instance->getName());
+        foreach (PhpWeekday::getLocales() as $locale) {
+            $names = array_values(PhpWeekday::getNames($locale));
 
-        $instance->setLocale('fr');
-
-        $this->assertEquals('Dimanche', $instance->getName());
+            $this->assertEquals(
+                $names[0],
+                $instance->getName($locale)
+            );
+        }
     }
 
     /** @test **/
