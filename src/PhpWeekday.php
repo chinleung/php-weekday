@@ -70,7 +70,7 @@ class PhpWeekday
      */
     public function getName(string $locale = null) : string
     {
-        if ($locale && $locale != $this->locale) {
+        if (! is_null($locale) && $locale != $this->locale) {
             return $this->parseName($this->getValue(), $locale);
         }
 
