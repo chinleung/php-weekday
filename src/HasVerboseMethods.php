@@ -5,6 +5,14 @@ namespace ChinLeung\PhpWeekday;
 trait HasVerboseMethods
 {
     /**
+     * Retrieve the name of the weekday.
+     *
+     * @param  string  $locale
+     * @return string
+     */
+    abstract public function getName(string $locale) : string;
+
+    /**
      * Function to retrieve the name in Afrikaans.
      *
      * @return string
