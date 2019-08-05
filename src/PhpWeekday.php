@@ -229,7 +229,7 @@ class PhpWeekday
     public function set($value) : self
     {
         if (is_numeric($value)) {
-            $this->value = $value;
+            $this->value = intval($value);
             $this->name = null;
         } else {
             $this->name = $value;
