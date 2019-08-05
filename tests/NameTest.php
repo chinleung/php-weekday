@@ -5,6 +5,7 @@ namespace ChinLeung\PhpWeekday\Tests;
 use ChinLeung\PhpWeekday\PhpWeekday;
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
+use ReflectionClass;
 
 class NameTest extends TestCase
 {
@@ -94,5 +95,32 @@ class NameTest extends TestCase
         $this->expectException(InvalidArgumentException::class);
 
         PhpWeekday::getValueFromName('Foo Bar', 'en');
+    }
+
+    /** @test **/
+    public function it_can_retrieve_the_translation_via_verbose_methods() : void
+    {
+        $weekday = new PhpWeekday(0, 'en');
+
+        foreach ($this->getVerboseMethods() as $method) {
+            $this->assertNotNull($weekday->{$method->name}());
+        }
+    }
+
+    /**
+     * Retrieve the list of verbose methods.
+     *
+     * @return array
+     */
+    protected function getVerboseMethods() : array
+    {
+        return array_values(
+            array_filter(
+                (new ReflectionClass(PhpWeekday::class))->getMethods(),
+                function ($method) {
+                    return strpos($method->name, 'in') === 0;
+                }
+            )
+        );
     }
 }
