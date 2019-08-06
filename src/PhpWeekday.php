@@ -2,11 +2,12 @@
 
 namespace ChinLeung\PhpWeekday;
 
+use ChinLeung\VerboseLocalization\HasVerboseLocalization;
 use InvalidArgumentException;
 
 class PhpWeekday
 {
-    use HasVerboseMethods;
+    use HasVerboseLocalization;
 
     /**
      * The locale of the application.
@@ -73,11 +74,11 @@ class PhpWeekday
     public function getName(string $locale = null) : string
     {
         if (! is_null($locale) && $locale != $this->locale) {
-            return $this->parseName($this->getValue(), $locale);
+            return $this->getTranslationIn($locale);
         }
 
         if (is_null($this->name)) {
-            $this->name = $this->parseName($this->getValue());
+            $this->name = $this->getTranslationIn($this->locale);
         }
 
         return $this->name;
@@ -110,6 +111,17 @@ class PhpWeekday
         }
 
         return require $path;
+    }
+
+    /**
+     * Retrieve the translation in a specific locale.
+     *
+     * @param  string  $locale
+     * @return string
+     */
+    public function getTranslationIn(string $locale) : string
+    {
+        return $this->parseName($this->getValue(), $locale);
     }
 
     /**
