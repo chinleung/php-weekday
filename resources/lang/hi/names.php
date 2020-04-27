@@ -1,11 +1,11 @@
 <?php
 
 return [
-  'Sunday' => 'रविवार',
-  'Monday' => 'सोमवार',
-  'Tuesday' => 'मंगलवार',
-  'Wednesday' => 'बुधवार',
-  'Thursday' => 'गुरूवार',
-  'Friday' => 'शुक्रवार',
-  'Saturday' => 'शनिवार',
+    'Sunday' => 'रविवार',
+    'Monday' => 'सोमवार',
+    'Tuesday' => 'मंगलवार',
+    'Wednesday' => 'बुधवार',
+    'Thursday' => 'गुरूवार',
+    'Friday' => 'शुक्रवार',
+    'Saturday' => 'शनिवार',
 ];

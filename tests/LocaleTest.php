@@ -9,7 +9,7 @@ use PHPUnit\Framework\TestCase;
 class LocaleTest extends TestCase
 {
     /** @test **/
-    public function an_exception_is_thrown_for_non_supported_locales() : void
+    public function an_exception_is_thrown_for_non_supported_locales(): void
     {
         $this->expectException(InvalidArgumentException::class);
 
@@ -17,7 +17,7 @@ class LocaleTest extends TestCase
     }
 
     /** @test **/
-    public function an_exception_is_thrown_for_non_supported_locales_on_change() : void
+    public function an_exception_is_thrown_for_non_supported_locales_on_change(): void
     {
         $this->expectException(InvalidArgumentException::class);
 
@@ -25,7 +25,7 @@ class LocaleTest extends TestCase
     }
 
     /** @test **/
-    public function the_locale_of_the_instance_can_be_changed() : void
+    public function the_locale_of_the_instance_can_be_changed(): void
     {
         $instance = new Weekday(0, 'en');
 
@@ -40,7 +40,7 @@ class LocaleTest extends TestCase
     }
 
     /** @test **/
-    public function it_can_retrieve_the_current_locale() : void
+    public function it_can_retrieve_the_current_locale(): void
     {
         $instance = new Weekday(0, 'en');
 
