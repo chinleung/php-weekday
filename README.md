@@ -20,35 +20,35 @@ composer require chinleung/php-weekday
 ### Retrieve a name from a value
 
 ``` php
-PhpWeekday::getNameFromValue(0, 'en'); // Sunday
-(new PhpWeekday(0, 'en'))->getName(); // Sunday
+Weekday::getNameFromValue(0, 'en'); // Sunday
+(new Weekday(0, 'en'))->getName(); // Sunday
 ```
 
 ### Retrieving a name from a value for a different locale
 
 ``` php
-PhpWeekday::getNameFromValue(0, 'fr'); // Dimanche
-(new PhpWeekday(0, 'en'))->getName('fr'); // Dimanche
+Weekday::getNameFromValue(0, 'fr'); // Dimanche
+(new Weekday(0, 'en'))->getName('fr'); // Dimanche
 ```
 
 ### Retrieving a value from the name
 
 ``` php
-PhpWeekday::getValueFromName('Sunday', 'en'); // 0
-PhpWeekday::getValueFromName('Lundi', 'fr'); // 1
-(new PhpWeekday('wednesday', 'en'))->getName(); // 3
+Weekday::getValueFromName('Sunday', 'en'); // 0
+Weekday::getValueFromName('Lundi', 'fr'); // 1
+(new Weekday('wednesday', 'en'))->getName(); // 3
 ```
 
 ### Retrieving all names for a locale
 
 ``` php
-PhpWeekday::getNames('en'); // ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+Weekday::getNames('en'); // ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 ```
 
 ### Changing the locale of an instance
 
 ``` php
-(new PhpWeekday(1, 'en'))->setLocale('fr')->getName(); // Lundi
+(new Weekday(1, 'en'))->setLocale('fr')->getName(); // Lundi
 ```
 
 ### Testing

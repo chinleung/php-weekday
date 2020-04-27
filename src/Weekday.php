@@ -1,11 +1,11 @@
 <?php
 
-namespace ChinLeung\PhpWeekday;
+namespace ChinLeung\Weekday;
 
 use ChinLeung\VerboseLocalization\HasVerboseLocalization;
 use InvalidArgumentException;
 
-class PhpWeekday
+class Weekday
 {
     use HasVerboseLocalization;
 

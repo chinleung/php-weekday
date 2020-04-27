@@ -1,8 +1,8 @@
 <?php
 
-namespace ChinLeung\PhpWeekday\Tests;
+namespace ChinLeung\Weekday\Tests;
 
-use ChinLeung\PhpWeekday\PhpWeekday;
+use ChinLeung\Weekday\Weekday;
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 
@@ -13,7 +13,7 @@ class LocaleTest extends TestCase
     {
         $this->expectException(InvalidArgumentException::class);
 
-        PhpWeekday::getNames('-');
+        Weekday::getNames('-');
     }
 
     /** @test **/
@@ -21,16 +21,16 @@ class LocaleTest extends TestCase
     {
         $this->expectException(InvalidArgumentException::class);
 
-        (new PhpWeekday(0, 'en'))->setLocale('-');
+        (new Weekday(0, 'en'))->setLocale('-');
     }
 
     /** @test **/
     public function the_locale_of_the_instance_can_be_changed() : void
     {
-        $instance = new PhpWeekday(0, 'en');
+        $instance = new Weekday(0, 'en');
 
-        foreach (PhpWeekday::getLocales() as $locale) {
-            $names = array_values(PhpWeekday::getNames($locale));
+        foreach (Weekday::getLocales() as $locale) {
+            $names = array_values(Weekday::getNames($locale));
 
             $this->assertEquals(
                 $names[0],
@@ -42,7 +42,7 @@ class LocaleTest extends TestCase
     /** @test **/
     public function it_can_retrieve_the_current_locale() : void
     {
-        $instance = new PhpWeekday(0, 'en');
+        $instance = new Weekday(0, 'en');
 
         $this->assertEquals('en', $instance->getLocale());
     }

@@ -1,8 +1,8 @@
 <?php
 
-namespace ChinLeung\PhpWeekday\Tests;
+namespace ChinLeung\Weekday\Tests;
 
-use ChinLeung\PhpWeekday\PhpWeekday;
+use ChinLeung\Weekday\Weekday;
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 
@@ -11,11 +11,11 @@ class ValueTest extends TestCase
     /** @test **/
     public function it_can_convert_sunday_to_its_value() : void
     {
-        foreach (PhpWeekday::getLocales() as $locale) {
+        foreach (Weekday::getLocales() as $locale) {
             $this->assertEquals(
                 0,
-                PhpWeekday::getValueFromName(
-                    PhpWeekday::getNameFromValue(0, $locale),
+                Weekday::getValueFromName(
+                    Weekday::getNameFromValue(0, $locale),
                     $locale
                 )
             );
@@ -27,6 +27,6 @@ class ValueTest extends TestCase
     {
         $this->expectException(InvalidArgumentException::class);
 
-        PhpWeekday::getNameFromValue(7, 'en');
+        Weekday::getNameFromValue(7, 'en');
     }
 }

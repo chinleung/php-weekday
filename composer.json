@@ -24,12 +24,12 @@
     },
     "autoload": {
         "psr-4": {
-            "ChinLeung\\PhpWeekday\\": "src"
+            "ChinLeung\\Weekday\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "ChinLeung\\PhpWeekday\\Tests\\": "tests"
+            "ChinLeung\\Weekday\\Tests\\": "tests"
         }
     },
     "scripts": {
