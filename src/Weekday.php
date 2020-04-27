@@ -47,7 +47,7 @@ class Weekday
      *
      * @return string
      */
-    public function getLocale() : string
+    public function getLocale(): string
     {
         return $this->locale;
     }
@@ -57,7 +57,7 @@ class Weekday
      *
      * @return array
      */
-    public static function getLocales() : array
+    public static function getLocales(): array
     {
         return array_map(
             'basename',
@@ -71,7 +71,7 @@ class Weekday
      * @param  string  $locale
      * @return string
      */
-    public function getName(string $locale = null) : string
+    public function getName(string $locale = null): string
     {
         if (! is_null($locale) && $locale != $this->locale) {
             return $this->getTranslationIn($locale);
@@ -91,7 +91,7 @@ class Weekday
      * @param  string  $locale
      * @return string
      */
-    public static function getNameFromValue(int $value, string $locale) : string
+    public static function getNameFromValue(int $value, string $locale): string
     {
         return static::parse($value, $locale)->getName();
     }
@@ -102,7 +102,7 @@ class Weekday
      * @param  string  $locale
      * @return array
      */
-    public static function getNames(string $locale) : array
+    public static function getNames(string $locale): array
     {
         $path = __DIR__."/../resources/lang/$locale/names.php";
 
@@ -119,7 +119,7 @@ class Weekday
      * @param  string  $locale
      * @return string
      */
-    public function getTranslationIn(string $locale) : string
+    public function getTranslationIn(string $locale): string
     {
         return $this->parseName($this->getValue(), $locale);
     }
@@ -129,7 +129,7 @@ class Weekday
      *
      * @return int
      */
-    public function getValue() : int
+    public function getValue(): int
     {
         if (is_null($this->value)) {
             $this->value = $this->parseValue($this->getName());
@@ -145,7 +145,7 @@ class Weekday
      * @param  string  $locale
      * @return string
      */
-    public static function getValueFromName(string $name, string $locale) : string
+    public static function getValueFromName(string $name, string $locale): string
     {
         return static::parse($name, $locale)->getValue();
     }
@@ -156,7 +156,7 @@ class Weekday
      * @param  string  $locale
      * @return bool
      */
-    public function isSupported(string $locale) : bool
+    public function isSupported(string $locale): bool
     {
         return file_exists(__DIR__."/../resources/lang/$locale");
     }
@@ -167,7 +167,7 @@ class Weekday
      * @param  string  $locale
      * @return bool
      */
-    public function isNotSupported(string $locale) : bool
+    public function isNotSupported(string $locale): bool
     {
         return ! $this->isSupported($locale);
     }
@@ -191,7 +191,7 @@ class Weekday
      * @param  string  $locale
      * @return string
      */
-    public function parseName(int $value, string $locale = null) : string
+    public function parseName(int $value, string $locale = null): string
     {
         if ($value < 0 || $value > 6) {
             throw new InvalidArgumentException(
@@ -209,7 +209,7 @@ class Weekday
      * @param  string  $locale
      * @return int
      */
-    public function parseValue(string $name, string $locale = null) : int
+    public function parseValue(string $name, string $locale = null): int
     {
         $names = array_map(
             'strtolower',
@@ -240,7 +240,7 @@ class Weekday
      * @param  string|int  $value
      * @return self
      */
-    public function set($value) : self
+    public function set($value): self
     {
         if (is_numeric($value)) {
             $this->value = intval($value);
@@ -259,7 +259,7 @@ class Weekday
      * @param  string  $locale
      * @return self
      */
-    public function setLocale(string $locale) : self
+    public function setLocale(string $locale): self
     {
         if ($locale != $this->locale) {
             if ($this->isNotSupported($locale)) {
@@ -280,7 +280,7 @@ class Weekday
      * @param  string  $locale
      * @return void
      */
-    protected static function throwNotSupportedLocaleException(string $locale) : void
+    protected static function throwNotSupportedLocaleException(string $locale): void
     {
         throw new InvalidArgumentException(
             "The locale ($locale) is not yet supported."

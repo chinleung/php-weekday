@@ -10,7 +10,7 @@ use ReflectionClass;
 class NameTest extends TestCase
 {
     /** @test **/
-    public function it_can_retrieve_all_names_for_a_locale() : void
+    public function it_can_retrieve_all_names_for_a_locale(): void
     {
         $this->assertEquals(
             ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
@@ -19,7 +19,7 @@ class NameTest extends TestCase
     }
 
     /** @test **/
-    public function it_can_retrieve_the_name_for_another_locale() : void
+    public function it_can_retrieve_the_name_for_another_locale(): void
     {
         $weekday = new Weekday('Sunday', 'en');
 
@@ -27,7 +27,7 @@ class NameTest extends TestCase
     }
 
     /** @test **/
-    public function it_can_parse_sunday() : void
+    public function it_can_parse_sunday(): void
     {
         $weekday = Weekday::parse(0, 'en');
 
@@ -36,7 +36,7 @@ class NameTest extends TestCase
     }
 
     /** @test **/
-    public function it_can_parse_monday() : void
+    public function it_can_parse_monday(): void
     {
         $weekday = Weekday::parse(1, 'en');
 
@@ -45,7 +45,7 @@ class NameTest extends TestCase
     }
 
     /** @test **/
-    public function it_can_parse_tuesday() : void
+    public function it_can_parse_tuesday(): void
     {
         $weekday = Weekday::parse(2, 'en');
 
@@ -54,7 +54,7 @@ class NameTest extends TestCase
     }
 
     /** @test **/
-    public function it_can_parse_wednesday() : void
+    public function it_can_parse_wednesday(): void
     {
         $weekday = Weekday::parse(3, 'en');
 
@@ -63,7 +63,7 @@ class NameTest extends TestCase
     }
 
     /** @test **/
-    public function it_can_parse_thursday() : void
+    public function it_can_parse_thursday(): void
     {
         $weekday = Weekday::parse(4, 'en');
 
@@ -72,7 +72,7 @@ class NameTest extends TestCase
     }
 
     /** @test **/
-    public function it_can_parse_friday() : void
+    public function it_can_parse_friday(): void
     {
         $weekday = Weekday::parse(5, 'en');
 
@@ -81,7 +81,7 @@ class NameTest extends TestCase
     }
 
     /** @test **/
-    public function it_can_parse_saturday() : void
+    public function it_can_parse_saturday(): void
     {
         $weekday = Weekday::parse(6, 'en');
 
@@ -90,7 +90,7 @@ class NameTest extends TestCase
     }
 
     /** @test **/
-    public function an_exception_is_thrown_for_non_valid_names() : void
+    public function an_exception_is_thrown_for_non_valid_names(): void
     {
         $this->expectException(InvalidArgumentException::class);
 
@@ -98,7 +98,7 @@ class NameTest extends TestCase
     }
 
     /** @test **/
-    public function it_can_retrieve_the_translation_via_verbose_methods() : void
+    public function it_can_retrieve_the_translation_via_verbose_methods(): void
     {
         $weekday = new Weekday(0, 'en');
 
@@ -112,7 +112,7 @@ class NameTest extends TestCase
      *
      * @return array
      */
-    protected function getVerboseMethods() : array
+    protected function getVerboseMethods(): array
     {
         return array_values(
             array_filter(

@@ -9,7 +9,7 @@ use PHPUnit\Framework\TestCase;
 class ValueTest extends TestCase
 {
     /** @test **/
-    public function it_can_convert_sunday_to_its_value() : void
+    public function it_can_convert_sunday_to_its_value(): void
     {
         foreach (Weekday::getLocales() as $locale) {
             $this->assertEquals(
@@ -23,7 +23,7 @@ class ValueTest extends TestCase
     }
 
     /** @test **/
-    public function an_exception_is_thrown_for_non_valid_values() : void
+    public function an_exception_is_thrown_for_non_valid_values(): void
     {
         $this->expectException(InvalidArgumentException::class);
 
